@@ -34,9 +34,10 @@ The WIP folder is kept separate from the finished releases in the repository roo
 ### Additional released patches
 
 - **Grand Theft Auto III — HUD + radar removal** — [download release](5E115FB6_GTA3_No_Hud.pnach)
-- **Grand Theft Auto III — Map Toggle 1.0** — [download release](5E115FB6_GTA_3_Map_Toggle.pnach)
+- **Grand Theft Auto III — Map Toggle 1.1** — [download release](5E115FB6_GTA_3_Map_Toggle.pnach)
 - **Grand Theft Auto III — Right Stick Camera and First Person 1.0** — [download release](5E115FB6_GTA_3_Right_Stick_Camera_and_First_Person.pnach)
-- **Grand Theft Auto: Vice City — Right Stick Camera and First Person 1.02** — [download release](20B19E49_GTA_Vice_City_Right_Stick_Camera_and_First_Person.pnach)
+- **Grand Theft Auto: Vice City — Right Stick Camera and First Person 1.03** — [download release](20B19E49_GTA_Vice_City_Right_Stick_Camera_and_First_Person.pnach)
+- **Grand Theft Auto: Vice City — Pause Map** — [download release](20B19E49_GTA_Vice_City_Pause_Map.pnach)
 
 ## Emulator testing
 
@@ -77,7 +78,7 @@ Enable **No HUD + Radar > Enable** to hide the GTA III HUD and minimap/radar.
 
 After turning the removal cheat off, use **Restore HUD + Radar** once if you want the HUD and radar back without restarting the game. Leave the restore option off during normal use.
 
-### GTA III Map Toggle 1.0
+### GTA III Map Toggle 1.1
 
 File: [`5E115FB6_GTA_3_Map_Toggle.pnach`](5E115FB6_GTA_3_Map_Toggle.pnach)
 
@@ -87,6 +88,7 @@ Usage and notes:
 
 - Press **D-pad Down** to open or close the map.
 - While the map is open, press **Cross** to hide or show the **location icons**.
+- While the map is open, **D-pad Right** sets gameplay HUD visibility without changing its normal gameplay controls.
 - The optional **Map on Pause Menu Background** group moves the pause-map background upward. It requires the main Map Toggle group; restart the game after changing this option.
 - A **cold boot** is required.
 - The release is designed around a **4:3 display**.
@@ -117,29 +119,37 @@ This video demonstrates the **GTA III Right Stick Camera and First Person** mod:
 
 https://github.com/user-attachments/assets/60f1e004-d828-4671-b8e2-57960329ffde
 
-### GTA Vice City Right Stick Camera and First Person 1.02
+### GTA Vice City Right Stick Camera and First Person 1.03
 
 File: [`20B19E49_GTA_Vice_City_Right_Stick_Camera_and_First_Person.pnach`](20B19E49_GTA_Vice_City_Right_Stick_Camera_and_First_Person.pnach)
 
 Target: **NTSC-U Day 1 SLUS-20552 / CRC `20B19E49`**
 
-This patch adds a **right-stick Orbit camera** and an **on-foot first-person camera** to Vice City.
+This patch adds a **right-stick Orbit camera**, an **on-foot first-person camera**, and a **Hood camera** in supported vehicles to Vice City. Vertical look follows the game's Invert Look setting.
 
 Controls and notes:
 
 - Press **D-pad Down** to toggle the camera mod on or off. This works with either stock controls or the Zeroable modern-controls patch.
 - While enabled and on foot, press **Select** to cycle **Orbit Far → Orbit Medium → Orbit Near → First Person**.
-- In vehicles, **Select** cycles the three Orbit distances only; First Person remains on-foot only.
+- In supported vehicles, **Select** cycles **Orbit Far → Orbit Medium → Orbit Near → Hood view**; on foot the fourth slot is First Person.
 - **R3** temporarily looks backward.
 - Hold the game's native **L1 camera-center action** to smoothly center the view; with the Zeroable modern on-foot controls, that action is on **R1**.
 - Stock controls are supported. The Zeroable modern-controls patch is optional and no controller remapping is bundled into this mod.
-- A **full restart and memory-card load** are required.
+- A **full restart and memory-card load** are required. The updated Hood view and stick tuning should be validated in gameplay.
 
 #### Demonstration video
 
 This video demonstrates the **Vice City Right Stick Camera and First Person** mod:
 
 https://github.com/user-attachments/assets/647da0ea-b225-4436-82e1-7636dfb32a2c
+
+### GTA Vice City Pause Map
+
+File: [`20B19E49_GTA_Vice_City_Pause_Map.pnach`](20B19E49_GTA_Vice_City_Pause_Map.pnach)
+
+Target: **NTSC-U Day 1 SLUS-20552 / CRC `20B19E49`**
+
+The pause map starts with the legend hidden while retaining the native legend toggle. The static **YOU ARE HERE** marker is replaced by a flashing directional player arrow. Other map-position and minimap behavior remain stock.
 
 ## WIP patch documentation
 

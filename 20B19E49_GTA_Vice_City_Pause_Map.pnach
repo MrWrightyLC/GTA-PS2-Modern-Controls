@@ -1,0 +1,28 @@
+gametitle=Grand Theft Auto: Vice City (NTSC-U Day 1 SLUS-20552 / CRC 20B19E49)
+comment=Pause Map. Legend starts hidden and the player position uses a flashing directional radar arrow.
+comment=Public credit: Zeroable.
+
+[GTA-PS2-Modern-Controls\Pause Map\Legend Hidden and Flashing Player Arrow]
+description=Hides the pause-map legend initially while preserving its toggle. Replaces the YOU ARE HERE marker with a flashing directional player arrow.
+author=Zeroable
+// Target ELF SHA256: 39F5ABACC6AA77C498CD0A23C38158B78B87D303995734105EF8CBC7B0297B23
+// 0026E1EC: reset legend during frontend initialization (original NOP).
+// 00291A30: safe delay slot; replace old marker drawing in-place from 00291A34.
+// Native pause clock retains 500ms visible / 200ms hidden intervals.
+// Native player heading 00289C10; centre sprite 004B0BC8; rotating draw 00291D50.
+// Existing map-position conversion and minimap rendering remain stock.
+patch=1,EE,0026E1EC,word,A380B01C
+patch=1,EE,00291A30,word,00000000
+patch=1,EE,00291A34,word,0C0A2704
+patch=1,EE,00291A38,word,00000000
+patch=1,EE,00291A3C,word,3C024049
+patch=1,EE,00291A40,word,34420FDB
+patch=1,EE,00291A44,word,44820800
+patch=1,EE,00291A48,word,2784EDD8
+patch=1,EE,00291A4C,word,240500FF
+patch=1,EE,00291A50,word,4600AB06
+patch=1,EE,00291A54,word,4600A346
+patch=1,EE,00291A58,word,0C0A4754
+patch=1,EE,00291A5C,word,46000B80
+patch=1,EE,00291A60,word,080A46FC
+patch=1,EE,00291A64,word,00000000
