@@ -1,23 +1,22 @@
 gametitle=Grand Theft Auto: Liberty City Stories (NTSC-U / CRC 7EA439F5)
-comment=Definitive Edition-style controls for Grand Theft Auto: Liberty City Stories, with optional analog acceleration and braking.
-comment=Built for the original PS2 default control scheme. Changing the in-game control type can produce different results.
-comment=Group 1 enables the complete modern vehicle and on-foot control layout. Group 2 optionally enables full-range analog R2/L2 vehicle pedals.
-comment=The pause menu always receives native stock controller input.
+comment=Version 1.1. Definitive Edition controls by Zeroable. One combined vehicle and on-foot controls mod, with optional analog pedals.
+comment=Enable 1 REQUIRED - Definitive Edition controls. Enable 2 OPTIONAL - Analog acceleration and braking only if desired.
+comment=Use the original PS2 default in-game control scheme. The pause menu receives native stock input.
 comment=Analog pedals require PCSX2 L2/R2 bindings to analog trigger axes.
-comment=Fully shut down and restart the game after changing the analog-pedal option. Avoid loading a save state made with a different option selection.
+comment=Fully shut down and start the game after changing these options; live disabling may leave previously written code active. Avoid loading a save state made with a different option selection.
 comment=Target: NTSC-U SLUS-21423, CRC 7EA439F5.
 comment=Public credit: Zeroable.
 comment=Control-remapping foundation based on PS2 Controller Remapper by pelvicthrustman.
 
 [GTA-PS2-Modern-Controls\Definitive Edition Controls\1 REQUIRED - Definitive Edition controls]
-description=Complete modern control layout. Vehicles: L2 brake, R2 accelerate, L1 fire, R1 or Cross handbrake, Square/Circle look left/right, R3 look behind, D-pad Up vehicle sub-mission/special action, and D-pad Right next radio station. Native D-pad Left/Down are suppressed in vehicles. On foot: R1 centers the camera, R2 fires, L2 aims, D-pad Left selects the previous weapon, and D-pad Right or L1 selects the next weapon. Circle, D-pad Up/Down, and R3 retain their native actions. Pause menus use stock controls.
+description=Combined vehicle and on-foot controls. Vehicles: L2 brake, R2 accelerate, L1 fire, R1 or Cross handbrake, Square/Circle look left/right, R3 look behind, D-pad Up vehicle sub-mission/special action, D-pad Right next radio station. Native D-pad Left is suppressed in vehicles; D-pad Down retains native input for camera mods. On foot: R1 center camera, R2 fire, L2 aim, D-pad Left previous weapon, D-pad Right or L1 next weapon; Circle, D-pad Up/Down and R3 retain native actions. Pause menus use stock controls. Optional analog pedals are a separate checkbox below.
 author=Zeroable
 
 patch=1,EE,200FD050,extended,00C0C821
 patch=1,EE,200FD054,extended,080D81DB
 patch=1,EE,200FD058,extended,24030070
 patch=1,EE,200FD05C,extended,87240002
-patch=1,EE,200FD060,extended,3485EFF4
+patch=1,EE,200FD060,extended,3485EFB4
 patch=1,EE,200FD064,extended,93260012
 patch=1,EE,200FD068,extended,93270013
 patch=1,EE,200FD06C,extended,93280010
@@ -31,7 +30,7 @@ patch=1,EE,200FD088,extended,240F00FF
 patch=1,EE,200FD08C,extended,A3200008
 patch=1,EE,200FD090,extended,A3200009
 patch=1,EE,200FD094,extended,A320000A
-patch=1,EE,200FD098,extended,A320000B
+patch=1,EE,200FD098,extended,00000000
 patch=1,EE,200FD09C,extended,A3200010
 patch=1,EE,200FD0A0,extended,A3200011
 patch=1,EE,200FD0A4,extended,A3200012
@@ -162,10 +161,10 @@ patch=1,EE,20360764,extended,0803F414
 patch=1,EE,203607CC,extended,0803F490
 
 [GTA-PS2-Modern-Controls\Definitive Edition Controls\2 OPTIONAL - Analog acceleration and braking]
-description=Optional. Requires Group 1. Enables full-range proportional R2 acceleration and L2 braking/reverse in vehicles. Removes the stock pedal pressure scaling and minimum-throttle behavior. On-foot and pause processing remain stock. Bind L2/R2 to analog trigger axes in PCSX2, then fully restart the game after enabling or disabling this option.
+description=Requires 1 REQUIRED - Definitive Edition controls. Enables full-range proportional R2 acceleration and L2 braking/reverse in vehicles. Removes the stock 4x pedal pressure scaling and minimum throttle. On-foot and pause processing remain stock. Bind L2/R2 to analog trigger axes in PCSX2. Fully shut down and start the game after enabling or disabling this option.
 author=Zeroable
 
-// Optional analog vehicle pedals: full-range R2/L2 pressure while driving.
+// Verified analog extension; machine code unchanged from the in-game tested version.
 patch=1,EE,200FDC00,extended,3C08003E
 patch=1,EE,200FDC04,extended,9509989A
 patch=1,EE,200FDC08,extended,11200008

@@ -18,7 +18,7 @@ The original PS2 games were designed around the DualShock 2 controller, which ha
 
 Modern controllers normally place analog acceleration and braking on R2 and L2. These patches move the games' native pressure-sensitive acceleration and braking actions to those triggers. When the controller and emulator provide analog trigger values, a light press can produce gentle input and a full press can produce full acceleration or braking. A controller configured for digital-only trigger input will still behave like an on/off button.
 
-*Vice City Stories* also supports analog acceleration and braking on PS2, so its R2/L2 trigger mappings preserve that analog behavior. *Liberty City Stories* now includes optional full-range analog acceleration and braking in the released patch. Its Group 1 provides the complete modern control layout; enable Group 2 only when you want proportional R2/L2 pedals and have those triggers bound to analog axes in PCSX2.
+*Vice City Stories* also supports analog acceleration and braking on PS2, so its R2/L2 trigger mappings preserve that analog behavior. *Liberty City Stories* **controls version 1.1** includes optional full-range analog acceleration and braking in the released patch. Its Group 1 provides the complete modern control layout and retains native vehicle D-pad Down for camera-mod shortcuts; enable Group 2 only when you want proportional R2/L2 pedals and have those triggers bound to analog axes in PCSX2.
 
 ## Coming soon / work in progress
 
@@ -26,10 +26,11 @@ Additional mods still being developed are kept in the [`WIP`](WIP) folder. These
 
 ### Available now as WIP builds
 
-- **Grand Theft Auto: Vice City Stories — Free Camera** — [download WIP build](WIP/4F32A11F_GTA_Vice_City_Stories_Free_Camera_WIP.pnach)
+- **Grand Theft Auto: Vice City Stories — Free Camera (updated WIP)** — [download WIP build](WIP/4F32A11F_GTA_Vice_City_Stories_Free_Camera_WIP.pnach)
+- **Grand Theft Auto: Liberty City Stories — On-Foot Hold Camera prototype** — [download WIP build](WIP/7EA439F5_GTA_Liberty_City_Stories_On_Foot_Hold_Camera_WIP.pnach)
 - **Grand Theft Auto: San Andreas — First-person mod** — [download WIP build](WIP/399A49CA_GTA_San_Andreas_First_Person_WIP.pnach)
 
-The WIP folder is kept separate from the finished releases in the repository root.
+The WIP folder is kept separate from the finished releases in the repository root. The LCS On-Foot Hold Camera patch is an independent prototype, not the released controls update.
 
 ### Additional released patches
 
@@ -153,13 +154,23 @@ The pause map starts with the legend hidden while retaining the native legend to
 
 ## WIP patch documentation
 
-### GTA Vice City Stories Free Camera
+### GTA Liberty City Stories On-Foot Hold Camera Prototype
+
+File: [`WIP/7EA439F5_GTA_Liberty_City_Stories_On_Foot_Hold_Camera_WIP.pnach`](WIP/7EA439F5_GTA_Liberty_City_Stories_On_Foot_Hold_Camera_WIP.pnach)
+
+Target: **NTSC-U SLUS-21423 / CRC `7EA439F5`**
+
+This separate **WIP camera experiment** starts with the stock camera. Tap **D-pad Down** to toggle the alternate cameras; while enabled, **Select** cycles views. Hold **D-pad Down** to adjust distance/FOV, or add **L1** to adjust height/pitch. Vehicle-follow height is experimental, and vehicle free-look remains pending.
+
+A **cold boot** is required. Avoid experimental save states, and test independently from other camera patches. This is not part of the released LCS controls patch.
+
+### GTA Vice City Stories Free Camera (WIP)
 
 File: [`WIP/4F32A11F_GTA_Vice_City_Stories_Free_Camera_WIP.pnach`](WIP/4F32A11F_GTA_Vice_City_Stories_Free_Camera_WIP.pnach)
 
 Target: **NTSC-U SLUS-21590 / CRC `4F32A11F`**
 
-This WIP adds a selectable Free Camera setup to Vice City Stories.
+This updated WIP adds a selectable Free Camera setup to Vice City Stories.
 
 Current controls and notes:
 
@@ -252,7 +263,7 @@ For the remaining D-pad directions, the current GTA III and Vice City patches su
 | D-pad Up | Vehicle sub-mission / special action | GTA III / Vice City: moved from native R3; Stories titles retain their current patch behavior |
 | D-pad Right | Next radio station | Moved from the game's native radio control |
 | D-pad Left | Unassigned by the modern layout | Native direction is suppressed while driving |
-| D-pad Down | Original game function | GTA III / Vice City: **Native**; Stories titles retain their current patch behavior |
+| D-pad Down | Original game function | GTA III / Vice City / Liberty City Stories 1.1: **Native**; Vice City Stories retains its existing patch behavior |
 | Select | Change camera mode | **Native** |
 | Start | Pause menu | **Native** |
 
@@ -268,7 +279,7 @@ For **Liberty City Stories** and **Vice City Stories**, the pause guard is built
 
 GTA III, Vice City, and Vice City Stories retain the original PS2 analog / pressure-sensitive acceleration and braking behavior when those actions are moved to R2/L2.
 
-Liberty City Stories now includes analog acceleration and braking as an optional **Group 2** in the released control patch. Group 1 remains the complete modern control layout by itself. Enable Group 2 for full-range proportional **R2 acceleration** and **L2 braking/reverse**, with L2/R2 bound to analog trigger axes in PCSX2; fully restart the game after changing this option.
+Liberty City Stories **version 1.1** includes analog acceleration and braking as an optional **Group 2** in the released control patch. Group 1 now passes vehicle D-pad Down through natively for camera-mod compatibility. Group 1 remains the complete modern control layout by itself. Enable Group 2 for full-range proportional **R2 acceleration** and **L2 braking/reverse**, with L2/R2 bound to analog trigger axes in PCSX2; fully restart the game after changing this option.
 
 ---
 
